@@ -1,9 +1,8 @@
-const Button = ({textOnly, onclick, children}) =>{
-    return(
-        <button onclick={onclick} className={textOnly ? "text-button":"button"}>
-           {children} 
-        </button>
-    )
-}  
-
+const Button = ({textOnly, onClick, children}) => {
+  return (
+    <button onClick={onClick} className={textOnly ? "text-button" : "button"}>
+        {children}
+    </button>
+  )
+}
 export default Button

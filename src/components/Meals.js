@@ -2,13 +2,13 @@ import { useState, useEffect } from "react"
 import MealItem from "./MealItem";
 
 const Meals = () => {
-    const [meals, serMeals] = useState([]);
+    const [meals, setMeals] = useState([]);
     
     useEffect(() => {
         async function fetchMeals() {
             fetch("http://localhost:3001/meals")
             .then(response => response.json())
-            .then(data => serMeals(data))
+            .then(data => setMeals(data))
         }
         fetchMeals()
     }, [])

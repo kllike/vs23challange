@@ -1,13 +1,13 @@
-//added header & meals
-import Header from "./components/Header";
-import Meals from "./components/Meals"
+import Header from './components/Header';
+import Meals from "./components/Meals";
+import { CartContextProvider } from './store/CartContext';
 
 const App = () => {
  return (
-    <>
-     <Header></Header>
-     <Meals></Meals>
-    </>
+    <CartContextProvider>
+     <Header/>
+     <Meals/>
+    </CartContextProvider>
   );
 }
 
